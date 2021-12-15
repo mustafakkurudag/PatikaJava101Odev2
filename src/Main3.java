@@ -19,13 +19,8 @@ public class Main3 {
 
     static double calculateTaximeter(int distance) {
         double startAmount = 10;
-
         double amount = startAmount + distance * AMOUNT_PER_KM;
 
-        if (amount < 20) {
-            amount = 20;
-        }
-
-        return amount;
+        return amount < 20 ? 20 : amount;
     }
 }
